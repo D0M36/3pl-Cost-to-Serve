@@ -31,7 +31,7 @@ with heading:
     st.caption(f"{m['name']} · Annualised financial view · AUD")
 
 PAGES=['Dashboard','Business Inputs','P&L Allocation','Service Rate Card','Customers','Customer Volumes','Customer Rates','Cost-to-Serve','Rate Card Analysis','New Customer Modelling','Scenarios','Reports & Exports']
-page=st.radio('Navigate',PAGES,horizontal=True,selection_mode='single',label_visibility='collapsed',key='top_page')
+page=st.radio('Navigate',PAGES,horizontal=True,label_visibility='collapsed',key='top_page')
 with st.expander('My models · New / Load / Save / Import / Export', expanded=False):
     a,b,c,d=st.columns(4)
     with a:
