@@ -14,7 +14,7 @@ def compute(model):
     mhe=number(assumptions.get('MHE operating cost',12))
     weeks=number(assumptions.get('Weeks per year',52),52)
     occupancy=number(assumptions.get('Target chargeable occupancy',.9))
-    eq={'General Storage':number(assumptions.get('General pallet',1)), 'Shelf':number(assumptions.get('Shelf',.25)), 'IBC':number(assumptions.get('IBC',1.1)), 'High Pallet':number(assumptions.get('High pallet',1.2)), 'Oversize':number(assumptions.get('Oversize',2)), 'Oversize Rails':number(assumptions.get('Oversize rail',2))}
+    eq={'General Storage':number(assumptions.get('General pallet',1)), 'Shelf':number(assumptions.get('Shelf',.25)), 'IBC':number(assumptions.get('IBC',1.2)), 'High Pallet':number(assumptions.get('High pallet',1.2)), 'Oversize':number(assumptions.get('Oversize',2)), 'Oversize Rails':number(assumptions.get('Oversize rail',2))}
     cap={'General Storage':number(assumptions.get('General pallet positions',0)), 'Shelf':number(assumptions.get('Shelf locations',0)), 'IBC':number(assumptions.get('IBC locations',0)), 'High Pallet':number(assumptions.get('Super Oversize',0)), 'Oversize':number(assumptions.get('Oversize locations',0)), 'Oversize Rails':number(assumptions.get('Oversize rail locations',0))}
     capacity=sum(cap[k]*eq[k] for k in eq)*occupancy
     pools={'Storage':0.,'Activity':0.,'Customer Overhead':0.,'Direct Pass-through':0.,'Exclude':0.}

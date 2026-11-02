@@ -2,7 +2,7 @@
 import random,uuid
 
 def blank():
-    return {'name':'New warehouse','assumptions':{'General pallet positions':0,'Target chargeable occupancy':.9,'Weeks per year':52,'Warehouse direct labour rate incl. on-costs':45,'Supervisor / admin rate incl. on-costs':80,'MHE operating cost':12,'Default cost markup':.25,'Base Overhead Weighting':.2,'Transaction Overhead Weighting':.8,'General pallet':1,'Shelf':.25,'IBC':1.1,'High pallet':1.2,'Oversize':2,'Oversize rail':2},'pnl':[],'services':[],'customers':[]}
+    return {'name':'New warehouse','assumptions':{'Days operational per week':5,'Hours operational per day':8,'General pallet positions':0,'Target chargeable occupancy':.9,'Weeks per year':52,'Warehouse direct labour rate incl. on-costs':45,'Supervisor / admin rate incl. on-costs':80,'MHE operating cost':12,'Default cost markup':.25,'Base Overhead Weighting':.2,'Transaction Overhead Weighting':.8,'General pallet':1,'Shelf':.25,'IBC':1.2,'High pallet':1.2,'Oversize':2,'Oversize rail':2},'pnl':[],'services':[],'customers':[]}
 
 def example():
     r=random.Random(1704)

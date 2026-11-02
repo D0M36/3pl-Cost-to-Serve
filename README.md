@@ -25,3 +25,12 @@ Set `DATABASE_URL` to a persistent PostgreSQL URL for hosted production environm
 - Customer overhead uses 20% equal / 80% transaction activity; this uses service-unit counts as a proxy. Validate the workbook's exact transaction-driver definition before relying on results.
 - Prospective customer view is fully loaded only; incremental cost treatment requires extra assumptions around step-fixed capacity and equipment requirements.
 - Full legacy workbook import, PDF reporting and detailed multi-variable scenarios are subsequent development items.
+
+## Interface update (November 2026)
+- Horizontal page navigation and Extolla top colour bar; no navigation sidebar.
+- Editable Business Inputs divided into General Business, Positions Available and Space Utilisation. IBC defaults to 1.20 pallet equivalents; existing saved models retain their own assumptions.
+- All-customer volume and rate matrices automatically follow active services in the rate card.
+- Customer-level profitability charts and two-decimal, centrally aligned output tables.
+- The optional AI pricing review requires an `OPENAI_API_KEY` in the app's Streamlit Cloud **Settings > Secrets**. Do not put API keys in GitHub. The AI button sends the pricing service summary to the OpenAI API; only use it with approved data. Without a key, the button shows a configuration warning.
+- Saved models created before this update may contain old warehouse-space factors; review and update assumptions after loading them.
+- This remains a prototype: no complete workbook reconciliation, private authentication, or persistent-cloud database has been established. Do not upload confidential client data to a public deployment.
